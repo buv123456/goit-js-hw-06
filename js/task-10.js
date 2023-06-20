@@ -21,7 +21,6 @@ function createBoxes(amount) {
     size += (i * 10);
     str += `<div style="height: ${size}px; width: ${size}px; background-color: ${color};" ></div>`;
   }
-  console.log(str);
   refs.boxesEl.innerHTML = str;
 }
 

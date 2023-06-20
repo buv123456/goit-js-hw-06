@@ -13,7 +13,7 @@ const refs = {
 
 
 function createBoxes(amount) {
-  if (!amount || amount > 100) return;
+  if (!amount) return;
   let str = "";
   let size = 30;
   for (let i = 1; i <= amount; i += 1) {
@@ -27,4 +27,4 @@ function createBoxes(amount) {
 
 refs.btnCreate.addEventListener('click', () => createBoxes(Number(refs.inpEl.value)));
 
-refs.btnDestroy.addEventListener('click', () => refs.boxesEl.innerHTML = '')
+refs.btnDestroy.addEventListener('click', () => { refs.boxesEl.innerHTML = ''; refs.inpEl.value = '' })

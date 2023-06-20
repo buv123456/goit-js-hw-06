@@ -4,11 +4,13 @@ inputEl.addEventListener('blur', checkSymbols);
 
 function checkSymbols() {
     if (inputEl.value.trim().length == inputEl.dataset.length) {
-        inputEl.classList.add('valid');
-        inputEl.classList.remove('invalid');
+        addRemove('invalid', 'valid');
         return;
     }
-    inputEl.classList.remove('valid')
-    inputEl.classList.add('invalid')
+    addRemove('valid', 'invalid');
 };
 
+function addRemove(prevCl, newCl) {
+    inputEl.classList.remove(prevCl);
+    inputEl.classList.add(newCl);
+}

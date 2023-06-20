@@ -18,7 +18,7 @@ function createBoxes(amount) {
   let size = 30;
   for (let i = 1; i <= amount; i += 1) {
     let color = getRandomHexColor();
-    size += (i * 10);
+    size += 10;
     str += `<div style="height: ${size}px; width: ${size}px; background-color: ${color};" ></div>`;
   }
   refs.boxesEl.innerHTML = str;
